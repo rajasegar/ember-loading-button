@@ -1,4 +1,4 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { moduleForComponent, test, skip } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
 moduleForComponent('loading-button', 'Integration | Component | loading button', {
@@ -6,9 +6,6 @@ moduleForComponent('loading-button', 'Integration | Component | loading button',
 });
 
 test('it renders', function(assert) {
-
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
 
   this.render(hbs`{{loading-button}}`);
 
@@ -22,4 +19,61 @@ test('it renders', function(assert) {
   `);
 
   assert.equal(this.$().text().trim(), 'template block text');
+});
+
+test('it renders with a color option', function(assert) {
+
+  this.render(hbs`
+    {{#loading-button
+    style="expand-right"
+    color="green"
+    }}
+    Submit
+    {{/loading-button}}
+`);
+
+  assert.equal(this.$('button').attr('data-color'), 'green');
+});
+
+test('it renders with a given style', function(assert) {
+  this.render(hbs`
+    {{#loading-button
+    style="expand-right"
+    color="green"
+    }}
+    Submit
+    {{/loading-button}}
+`);
+
+  assert.equal(this.$('button').attr('data-style'), 'expand-right');
+
+});
+
+skip('it renders with a customClass', function(assert) {
+  this.render(hbs`
+    {{#loading-button
+    style="expand-right"
+    customClass="btn-primary"
+    }}
+    Submit
+    {{/loading-button}}
+`);
+
+  assert.equal(this.$('.btn-primary').length(), 1);
+
+});
+
+test('it renders with a given size', function(assert) {
+  this.render(hbs`
+    {{#loading-button
+    style="expand-right"
+    color="green"
+    size="xl"
+    }}
+    Submit
+    {{/loading-button}}
+`);
+
+  assert.equal(this.$('button').attr('data-size'), 'xl');
+
 });
