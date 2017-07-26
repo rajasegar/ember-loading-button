@@ -11,7 +11,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/rajasegar/ember-loading-button",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
