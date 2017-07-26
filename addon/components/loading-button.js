@@ -15,11 +15,13 @@ export default Component.extend({
   layout,
   tagName: 'button',
   classNames: ['loading-button'],
+  classNameBindings: ['customClass'],
   attributeBindings:[
     'style:data-style',
     'color:data-color',
     'isLoading:data-loading',
-    'isDisabled:disabled'
+    'isDisabled:disabled',
+    'size:data-size'
   ],
   isLoading: false,
   isDisabled: computed.reads('isLoading'),

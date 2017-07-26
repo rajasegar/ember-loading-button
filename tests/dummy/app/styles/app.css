@@ -1,0 +1,25 @@
+@import 'custom-buttons.css';
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 1em;
+    margin-top: 1em;
+    background-color: white;
+}
+
+footer section {
+    margin: 0 auto;
+    text-align: center;
+}
+
