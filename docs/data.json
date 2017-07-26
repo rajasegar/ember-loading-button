@@ -1,0 +1,13 @@
+{
+    "project": {
+        "name": "ember-loading-button",
+        "description": "Ember async buttons with loading indicators",
+        "version": "v0.1.1"
+    },
+    "files": {},
+    "modules": {},
+    "classes": {},
+    "elements": {},
+    "classitems": [],
+    "warnings": []
+}
