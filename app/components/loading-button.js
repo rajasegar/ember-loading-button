@@ -1,0 +1,1 @@
+export { default } from 'ember-loading-button/components/loading-button';

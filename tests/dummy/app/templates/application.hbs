@@ -1,5 +1,55 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
+<h1>Ember Loading Button</h1>
+<div class="button-container">
+  <section>
+    <h4>expand-left</h4>
+    {{#loading-button
+       style="expand-left"
+       color="green"
+       action=(action 'promiseAction')}}Submit{{/loading-button}}
+  </section>
+  <section>
+    <h4>expand-right</h4>
+    {{#loading-button loaderStyle="loader-bars" style="expand-right" color="green" action=(action 'promiseAction')}}Submit{{/loading-button}}
+  </section>
+  <section>
+    <h4>expand-up</h4>
+    {{#loading-button loaderStyle="loader-bars" isLoading=true style="expand-up" color="green" action=(action 'promiseAction') }}Submit{{/loading-button}}
+  </section>
+  <section>
+    <h4>expand-down</h4>
+    {{#loading-button style="expand-down" color="green" action=(action 'promiseAction') }}Submit{{/loading-button}}
+  </section>
+  <section>
+    <h4>contract</h4>
+    {{#loading-button style="contract" color="green" action=(action 'promiseAction') isLoading=true}}Submit{{/loading-button}}
+  </section>
+  <section>
+    <h4>contract-overlay</h4>
+    {{#loading-button style="contract-overlay" color="green" action=(action 'promiseAction') }}Submit{{/loading-button}}
+  </section>
+  <section>
+    <h4>zoom-in</h4>
+    {{#loading-button style="zoom-in" color="green" action=(action 'promiseAction') }}Submit{{/loading-button}}
+  </section>
+  <section>
+    <h4>zoom-out</h4>
+    {{#loading-button style="zoom-out" color="green" action=(action 'promiseAction') }}Submit{{/loading-button}}
+  </section>
+  <section>
+    <h4>slide-left</h4>
+    {{#loading-button style="slide-left" color="green" action=(action 'promiseAction') }}Submit{{/loading-button}}
+  </section>
+  <section>
+    <h4>slide-right</h4>
+    {{#loading-button style="slide-right" color="green" action=(action 'promiseAction') }}Submit{{/loading-button}}
+  </section>
+  <section>
+    <h4>slide-up</h4>
+    {{#loading-button style="slide-up" color="green" action=(action 'promiseAction') }}Submit{{/loading-button}}
+  </section>
+  <section>
+    <h4>slide-down</h4>
+    {{#loading-button style="slide-down" color="green" action=(action 'promiseAction') }}Update Properties{{/loading-button}}
+  </section>
+</div>
 {{outlet}}
