@@ -1,6 +1,6 @@
 {
   "name": "ember-loading-button",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Ember async buttons with loading indicators",
   "keywords": [
     "ember-addon"
