@@ -17,7 +17,7 @@ export default Component.extend({
   classNames: ['loading-button'],
   classNameBindings: ['customClass'],
   attributeBindings:[
-    'style:data-style',
+    'transition:data-style',
     'color:data-color',
     'isLoading:data-loading',
     'isDisabled:disabled',

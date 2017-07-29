@@ -9,9 +9,7 @@
  position:absolute;
  z-index:2;
  display:inline-block;
- width:32px;
- height:32px;
- /* top:50%; */
+ top: 1em;
  margin-top:0;
  opacity:0;
  pointer-events:none
@@ -235,13 +233,16 @@
  margin-left:0;
  transform:none
 }
+
+/* contract */
 .loading-button[data-style=contract] {
  overflow:hidden;
  width:100px
 }
 .loading-button[data-style=contract] .loading-spinner {
- left:50%;
- margin-left:0
+ left:.75em;
+ margin-left:0;
+ top: .5em;
 }
 .loading-button[data-style=contract][data-loading] {
  border-radius:50%;
@@ -253,6 +254,9 @@
 .loading-button[data-style=contract][data-loading] .loading-spinner {
  opacity:1
 }
+
+/* contract-overlay */
+
 .loading-button[data-style=contract-overlay] {
  overflow:hidden;
  width:100px;

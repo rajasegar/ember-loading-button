@@ -47,7 +47,7 @@ With customClass to override the styles
 
 ## Properties
 
-### style 
+### transition 
 The style for the loading indicator which indicates how and where the loader is placed within the button.
 
 List of available styles:

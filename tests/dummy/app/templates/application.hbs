@@ -1,76 +1,5 @@
 <h1>Ember Loading Button</h1>
-<div class="button-container">
-  <section>
-    <h4>expand-left</h4>
-    {{#loading-button
-       style="expand-left"
-       color="green"
-       loaderStyle="loader-horizontal-dots"
-       isLoading=true
-       action=(action 'promiseAction')}}Submit{{/loading-button}}
-  </section>
-  <section>
-    <h4>expand-right</h4>
-    {{#loading-button loaderStyle="loader-horizontal-dots" isLoading=true style="expand-right" color="green" action=(action 'promiseAction')}}Submit{{/loading-button}}
-  </section>
-  <section>
-    <h4>expand-up</h4>
-    {{#loading-button loaderStyle="loader-horizontal-dots" isLoading=true style="expand-up" color="green" action=(action 'promiseAction') }}Submit{{/loading-button}}
-  </section>
-  <section>
-    <h4>expand-down</h4>
-    {{#loading-button loaderStyle="loader-horizontal-dots" isLoading=true style="expand-down" action=(action 'promiseAction') }}Submit{{/loading-button}}
-  </section>
-  <section>
-    <h4>contract</h4>
-    {{#loading-button style="contract" color="green" action=(action 'promiseAction') }}Submit{{/loading-button}}
-  </section>
-  <section>
-    <h4>zoom-in</h4>
-    {{#loading-button style="zoom-in" color="green" action=(action 'promiseAction') }}Submit{{/loading-button}}
-  </section>
-  <section>
-    <h4>zoom-out</h4>
-    {{#loading-button style="zoom-out" color="green" action=(action 'promiseAction') }}Submit{{/loading-button}}
-  </section>
-  <section></section>
-  <section>
-    <h4>slide-left</h4>
-    {{#loading-button style="slide-left" customClass="btn btn-primary" action=(action 'promiseAction') }}Primary{{/loading-button}}
-  </section>
-  <section>
-    <h4>slide-right</h4>
-    {{#loading-button style="slide-right" customClass="btn btn-success" action=(action 'promiseAction') }}Success{{/loading-button}}
-  </section>
-  <section>
-    <h4>slide-up</h4>
-    {{#loading-button style="slide-up" customClass="btn btn-info" action=(action 'promiseAction') }}Info{{/loading-button}}
-  </section>
-  <section>
-    <h4>slide-down</h4>
-    {{#loading-button style="slide-down"  customClass="btn btn-danger" action=(action 'promiseAction') }}Danger{{/loading-button}}
-  </section>
-  <section>
-    <h4>Size : Normal</h4>
-    {{#loading-button style="slide-down"  action=(action 'promiseAction') }}Submit{{/loading-button}}
-  </section>
-  <section>
-    <h4>Size : Extra Small</h4>
-    {{#loading-button style="slide-down"  size="xs" action=(action 'promiseAction') }}Submit{{/loading-button}}
-  </section>
-  <section>
-    <h4>Size : Small</h4>
-    {{#loading-button style="slide-down" size="s" action=(action 'promiseAction') }}Submit{{/loading-button}}
-  </section>
-  <section>
-    <h4>Size : Large</h4>
-    {{#loading-button style="slide-down"  size="l" action=(action 'promiseAction') }}Submit{{/loading-button}}
-  </section>
-  <section>
-    <h4>Size : Extra Large</h4>
-    {{#loading-button style="slide-down"  size="xl" action=(action 'promiseAction') }}Submit{{/loading-button}}
-  </section>
-</div>
+{{outlet}}
 <footer>
   <section>
     <a href="docs">Documentation</a>
@@ -78,4 +7,3 @@
     <a href="https://github.com/rajasegar/ember-loading-button">Github</a>
   </section>
 </footer>
-{{outlet}}
