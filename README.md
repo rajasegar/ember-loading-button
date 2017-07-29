@@ -79,6 +79,18 @@ List of available sizes:
 * l  => Large
 * xl => Extra Large
 
+### loaderStyle
+The type of loader you want to choose from:
+
+* loader-circular-dots-fade
+* loader-bars
+* loader-fading-circle
+* loader-scaling-circles
+* loader-trailing-dots
+* loader-horizontal-dots
+
 ## Credits
 * [Hakim El Hattab](http://hakim.se/)
 * [Luke Haas](https://projects.lukehaas.me/css-loaders/)
+* [Lauren Tan](https://github.com/poteto)
+* [Mary Lou](https://github.com/crnacura)

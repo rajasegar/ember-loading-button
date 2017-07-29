@@ -5,19 +5,21 @@
     {{#loading-button
        style="expand-left"
        color="green"
+       loaderStyle="loader-horizontal-dots"
+       isLoading=true
        action=(action 'promiseAction')}}Submit{{/loading-button}}
   </section>
   <section>
     <h4>expand-right</h4>
-    {{#loading-button loaderStyle="loader-bars" style="expand-right" color="green" action=(action 'promiseAction')}}Submit{{/loading-button}}
+    {{#loading-button loaderStyle="loader-horizontal-dots" isLoading=true style="expand-right" color="green" action=(action 'promiseAction')}}Submit{{/loading-button}}
   </section>
   <section>
     <h4>expand-up</h4>
-    {{#loading-button loaderStyle="loader-bars" style="expand-up" color="green" action=(action 'promiseAction') }}Submit{{/loading-button}}
+    {{#loading-button loaderStyle="loader-horizontal-dots" isLoading=true style="expand-up" color="green" action=(action 'promiseAction') }}Submit{{/loading-button}}
   </section>
   <section>
     <h4>expand-down</h4>
-    {{#loading-button style="expand-down" action=(action 'promiseAction') }}Submit{{/loading-button}}
+    {{#loading-button loaderStyle="loader-horizontal-dots" isLoading=true style="expand-down" action=(action 'promiseAction') }}Submit{{/loading-button}}
   </section>
   <section>
     <h4>contract</h4>

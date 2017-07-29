@@ -1,3 +1,7 @@
+:root  {
+    --disabled-button-bg: #999;
+}
+
 .loading-button {
  position:relative
 }
@@ -76,7 +80,7 @@
  overflow:hidden
 }
 .loading-button[data-style=expand-up] .loading-spinner {
- top:-32px;
+ top: -20%;
  left:35%;
  margin-left:0
 }
@@ -85,7 +89,7 @@
 }
 .loading-button[data-style=expand-up][data-loading] .loading-spinner {
  opacity:1;
- top:26px;
+ top: 20%;
  margin-top:0
 }
 .loading-button[data-style=expand-up][data-loading][data-size="s"],.loading-button[data-style=expand-up][data-loading][data-size="xs"] {
@@ -98,7 +102,7 @@
  overflow:hidden
 }
 .loading-button[data-style=expand-down] .loading-spinner {
- top:62px;
+ top: 50%;
  left:35%;
  margin-left:0
 }
@@ -319,9 +323,12 @@
 .loading-button[disabled],.loading-button[data-loading] {
  border-color:rgba(0,0,0,0.07)
 }
-.loading-button[disabled],.loading-button[disabled]:hover,.loading-button[data-loading],.loading-button[data-loading]:hover {
+.loading-button[disabled],
+.loading-button[disabled]:hover,
+.loading-button[data-loading],
+.loading-button[data-loading]:hover {
  cursor:default;
- background-color:#999
+ background-color:var(--disabled-button-bg)
 }
 .loading-button[data-size=xs] {
  padding:4px 8px
