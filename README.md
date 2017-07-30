@@ -23,7 +23,7 @@ Heavily inspired by this [Ladda Buttons](http://lab.hakim.se/ladda/)
 With Default Loading indicator 
 ```hbs
 {{#loading-button
-       style="expand-left"
+       transition="expand-left"
        action=(action 'promiseAction')}}
        Submit
 {{/loading-button}}
@@ -33,8 +33,8 @@ With Default Loading indicator
 With an optional loading indicator
 ```hbs
     {{#loading-button 
-      loaderStyle="loader-bars" 
-      style="expand-right" 
+      loaderStyle="bars" 
+      transition="expand-right" 
       action=(action 'promiseAction')}}
     Submit
     {{/loading-button}}
@@ -42,7 +42,12 @@ With an optional loading indicator
 
 With customClass to override the styles
 ```hbs
-    {{#loading-button style="expand-down" customClass="btn-warning" action=(action 'promiseAction') }}Submit{{/loading-button}}
+    {{#loading-button 
+      transition="expand-down" 
+      customClass="btn-warning" 
+      action=(action 'promiseAction') }}
+    Submit
+    {{/loading-button}}
 ```
 
 ## Properties
@@ -82,12 +87,13 @@ List of available sizes:
 ### loaderStyle
 The type of loader you want to choose from:
 
-* loader-circular-dots-fade
-* loader-bars
-* loader-fading-circle
-* loader-scaling-circles
-* loader-trailing-dots
-* loader-horizontal-dots
+* circular-dots-fade
+* bars
+* rotating-slice
+* fading-circle
+* scaling-circles
+* trailing-dots
+* horizontal-dots
 
 ## Credits
 * [Hakim El Hattab](http://hakim.se/)

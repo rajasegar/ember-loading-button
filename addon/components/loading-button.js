@@ -25,7 +25,7 @@ export default Component.extend({
   ],
   isLoading: false,
   isDisabled: computed.reads('isLoading'),
-  loaderStyle: 'loader-circular-dots-fade',
+  loaderStyle: 'circular-dots-fade',
   click() {
     this.set('isLoading', true);
     let params = getWithDefault(this, 'params', []);

@@ -195,7 +195,7 @@
  overflow:hidden
 }
 .loading-button[data-style=zoom-out] .loading-spinner {
- /* left:50%; */
+ left:50%;
  margin-left:32px;
  transform:scale(2.5)
 }
@@ -212,11 +212,13 @@
  margin-left:0;
  transform:none
 }
+
+/* zoom-in */
 .loading-button[data-style=zoom-in] {
  overflow:hidden
 }
 .loading-button[data-style=zoom-in] .loading-spinner {
- /* left:50%; */
+ left:50%;
  margin-left:-16px;
  transform:scale(0.2)
 }

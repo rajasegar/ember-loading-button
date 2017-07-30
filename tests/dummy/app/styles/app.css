@@ -21,6 +21,17 @@ footer section {
     text-align: center;
 }
 
+.button-container {
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.form-grid {
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
 :root {
     /* --loader-color: yellow; */

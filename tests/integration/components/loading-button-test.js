@@ -35,10 +35,10 @@ test('it renders with a color option', function(assert) {
   assert.equal(this.$('button').attr('data-color'), 'green');
 });
 
-test('it renders with a given style', function(assert) {
+test('it renders with a given loading transition', function(assert) {
   this.render(hbs`
     {{#loading-button
-    style="expand-right"
+    transition="expand-right"
     color="green"
     }}
     Submit
@@ -52,7 +52,7 @@ test('it renders with a given style', function(assert) {
 skip('it renders with a customClass', function(assert) {
   this.render(hbs`
     {{#loading-button
-    style="expand-right"
+    transition="expand-right"
     customClass="btn-primary"
     }}
     Submit
@@ -66,7 +66,7 @@ skip('it renders with a customClass', function(assert) {
 test('it renders with a given size', function(assert) {
   this.render(hbs`
     {{#loading-button
-    style="expand-right"
+    transition="expand-right"
     color="green"
     size="xl"
     }}
@@ -75,5 +75,23 @@ test('it renders with a given size', function(assert) {
 `);
 
   assert.equal(this.$('button').attr('data-size'), 'xl');
+
+});
+
+test('it renders with a given loader Style', function(assert) {
+  this.render(hbs`
+    {{#loading-button
+    transition="expand-right"
+    color="green"
+    size="xl"
+    loaderStyle="bars"
+    isLoading=true
+    }}
+    Submit
+    {{/loading-button}}
+`);
+
+
+  assert.equal(this.$('.loader-bars').length, 1);
 
 });

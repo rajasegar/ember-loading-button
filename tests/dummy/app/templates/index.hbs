@@ -1,3 +1,19 @@
+<div class="form-grid">
+  <section>
+    <p> Loader Style: </p>
+    <select onchange={{action (mut loaderStyle) value="target.value"}}>
+      {{#each loaderStyles as |l|}}
+        <option value={{l}}>{{l}}</option>
+      {{/each}}
+    </select>
+  </section>
+  <section>
+    <label>
+      {{input type="checkbox" checked=isLoading}} Show Loading State
+    </label>
+  </section>
+</div>
+
 <div class="button-container">
   <section>
     <h4>expand-left</h4>
@@ -114,17 +130,6 @@
     <h4>slide-down</h4>
     {{#loading-button
        transition="slide-down"
-       color="green"
-       loaderStyle=loaderStyle
-       isLoading=isLoading
-       action=(action 'promiseAction')}}
-      Submit
-    {{/loading-button}}
-  </section>
-  <section>
-    <h4>Size : Normal</h4>
-    {{#loading-button
-       transition="zoom-in"
        color="green"
        loaderStyle=loaderStyle
        isLoading=isLoading

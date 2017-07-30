@@ -6,18 +6,20 @@ const {
 } = Ember;
 
 const LOADER_STYLES = [
-  'loader-circular-dots-fade',
-  'loader-bars',
-  'loader-fading-circle',
-  'loader-scaling-circles',
-  'loader-trailing-dots',
-  'loader-horizontal-dots',
-  'loader-circle-slice'
+  'circular-dots-fade',
+  'bars',
+  'rotating-slice',
+  'fading-circle',
+  'scaling-circles',
+  'trailing-dots',
+  'horizontal-dots',
+  'circle-slice'
 ];
 
 export default Ember.Controller.extend({
-  loaderStyle: LOADER_STYLES[6],
-  isLoading: true,
+  loaderStyle: LOADER_STYLES[0],
+  loaderStyles: LOADER_STYLES,
+  isLoading: false,
   actions: {
     promiseAction() {
       return new Promise((resolve) =>{
