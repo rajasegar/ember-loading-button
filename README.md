@@ -96,7 +96,7 @@ The type of loader you want to choose from:
 * horizontal-dots
 
 ## Credits
-* [Hakim El Hattab](http://hakim.se/)
-* [Luke Haas](https://projects.lukehaas.me/css-loaders/)
-* [Lauren Tan](https://github.com/poteto)
-* [Mary Lou](https://github.com/crnacura)
+* [Hakim El Hattab](http://hakim.se/) for Ladda buttons
+* [Luke Haas](https://projects.lukehaas.me/css-loaders/) for CSS loaders
+* [Lauren Tan](https://github.com/poteto) for ember-async-button
+* [Mary Lou](https://github.com/crnacura) for the inspiration
