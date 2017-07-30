@@ -3,7 +3,7 @@
         "name": "ember-loading-button",
         "description": "Ember async buttons with loading indicators",
         "url": "https://github.com/rajasegar/ember-loading-button",
-        "version": "v0.1.6"
+        "version": "v0.1.7"
     },
     "files": {},
     "modules": {},
