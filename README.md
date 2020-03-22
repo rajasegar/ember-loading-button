@@ -15,7 +15,6 @@ Heavily inspired by this [Ladda Buttons](http://lab.hakim.se/ladda/)
 [Demo](http://rajasegar.github.io/ember-loading-button)
 
 ## Installation
-
 * `ember install ember-loading-button`
 
 ## Usage
@@ -100,3 +99,21 @@ The type of loader you want to choose from:
 * [Luke Haas](https://projects.lukehaas.me/css-loaders/) for CSS loaders
 * [Lauren Tan](https://github.com/poteto) for ember-async-button
 * [Mary Lou](https://github.com/crnacura) for the inspiration
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
+
+Contributing
+------------------------------------------------------------------------------
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).
