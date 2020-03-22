@@ -1,97 +1,99 @@
-import { moduleForComponent, test, skip } from 'ember-qunit';
+import { module, skip, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render, find, findAll } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('loading-button', 'Integration | Component | loading button', {
-  integration: true
-});
+module('Integration | Component | loading button', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
+  test('it renders', async function(assert) {
 
-  this.render(hbs`{{loading-button}}`);
+    await render(hbs`{{loading-button}}`);
 
-  assert.equal(this.$().text().trim(), '');
+    assert.equal(find('*').textContent.trim(), '');
 
-  // Template block usage:
-  this.render(hbs`
-    {{#loading-button}}
-      template block text
-    {{/loading-button}}
+    // Template block usage:
+    await render(hbs`
+      {{#loading-button}}
+        template block text
+      {{/loading-button}}
+    `);
+
+    assert.equal(find('*').textContent.trim(), 'template block text');
+  });
+
+  test('it renders with a color option', async function(assert) {
+
+    await render(hbs`
+      {{#loading-button
+      style="expand-right"
+      color="green"
+      }}
+      Submit
+      {{/loading-button}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
-});
+    assert.equal(find('button').getAttribute('data-color'), 'green');
+  });
 
-test('it renders with a color option', function(assert) {
+  test('it renders with a given loading transition', async function(assert) {
+    await render(hbs`
+      {{#loading-button
+      transition="expand-right"
+      color="green"
+      }}
+      Submit
+      {{/loading-button}}
+  `);
 
-  this.render(hbs`
-    {{#loading-button
-    style="expand-right"
-    color="green"
-    }}
-    Submit
-    {{/loading-button}}
-`);
+    assert.equal(find('button').getAttribute('data-style'), 'expand-right');
 
-  assert.equal(this.$('button').attr('data-color'), 'green');
-});
+  });
 
-test('it renders with a given loading transition', function(assert) {
-  this.render(hbs`
-    {{#loading-button
-    transition="expand-right"
-    color="green"
-    }}
-    Submit
-    {{/loading-button}}
-`);
+  skip('it renders with a customClass', function(assert) {
+    this.render(hbs`
+      {{#loading-button
+      transition="expand-right"
+      customClass="btn-primary"
+      }}
+      Submit
+      {{/loading-button}}
+  `);
 
-  assert.equal(this.$('button').attr('data-style'), 'expand-right');
+    assert.equal(findAll('.btn-primary').length(), 1);
 
-});
+  });
 
-skip('it renders with a customClass', function(assert) {
-  this.render(hbs`
-    {{#loading-button
-    transition="expand-right"
-    customClass="btn-primary"
-    }}
-    Submit
-    {{/loading-button}}
-`);
+  test('it renders with a given size', async function(assert) {
+    await render(hbs`
+      {{#loading-button
+      transition="expand-right"
+      color="green"
+      size="xl"
+      }}
+      Submit
+      {{/loading-button}}
+  `);
 
-  assert.equal(this.$('.btn-primary').length(), 1);
+    assert.equal(find('button').getAttribute('data-size'), 'xl');
 
-});
+  });
 
-test('it renders with a given size', function(assert) {
-  this.render(hbs`
-    {{#loading-button
-    transition="expand-right"
-    color="green"
-    size="xl"
-    }}
-    Submit
-    {{/loading-button}}
-`);
-
-  assert.equal(this.$('button').attr('data-size'), 'xl');
-
-});
-
-test('it renders with a given loader Style', function(assert) {
-  this.render(hbs`
-    {{#loading-button
-    transition="expand-right"
-    color="green"
-    size="xl"
-    loaderStyle="bars"
-    isLoading=true
-    }}
-    Submit
-    {{/loading-button}}
-`);
+  test('it renders with a given loader Style', async function(assert) {
+    await render(hbs`
+      {{#loading-button
+      transition="expand-right"
+      color="green"
+      size="xl"
+      loaderStyle="bars"
+      isLoading=true
+      }}
+      Submit
+      {{/loading-button}}
+  `);
 
 
-  assert.equal(this.$('.loader-bars').length, 1);
+    assert.equal(findAll('.loader-bars').length, 1);
 
+  });
 });

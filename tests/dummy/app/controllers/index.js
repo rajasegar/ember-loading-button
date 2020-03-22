@@ -1,9 +1,6 @@
-import Ember from 'ember';
-
-const {
-  RSVP: { Promise },
-  run: { later }
-} = Ember;
+import Controller from '@ember/controller';
+import { Promise } from 'rsvp';
+import { later } from '@ember/runloop';
 
 const LOADER_STYLES = [
   'circular-dots-fade',
@@ -16,7 +13,7 @@ const LOADER_STYLES = [
   'circle-slice'
 ];
 
-export default Ember.Controller.extend({
+export default Controller.extend({
   loaderStyle: LOADER_STYLES[0],
   loaderStyles: LOADER_STYLES,
   isLoading: false,

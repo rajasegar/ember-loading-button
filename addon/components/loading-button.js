@@ -1,14 +1,12 @@
+import { reads } from '@ember/object/computed';
+import { run } from '@ember/runloop';
+import { getWithDefault, observer, set, get } from '@ember/object';
+import Component from '@ember/component';
 import Ember from 'ember';
 import layout from '../templates/components/loading-button';
 
 const {
-  get,
-  set,
-  computed,
-  observer,
-  deprecate,
-  getWithDefault,
-  Component
+  deprecate
 } = Ember;
 
 export default Component.extend({
@@ -24,13 +22,13 @@ export default Component.extend({
     'size:data-size'
   ],
   isLoading: false,
-  isDisabled: computed.reads('isLoading'),
+  isDisabled: reads('isLoading'),
   loaderStyle: 'circular-dots-fade',
   click() {
     this.set('isLoading', true);
     let params = getWithDefault(this, 'params', []);
     let callbackHandler = (promise) => {
-      Ember.run(this, () => {
+      run(this, () => {
         set(this, 'promise', promise);
       });
     };
