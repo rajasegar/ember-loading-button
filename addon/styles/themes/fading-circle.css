@@ -1,0 +1,49 @@
+/*
+  LOADER - fading-circle
+------------------------
+*/
+
+.loader-fading-circle {
+    text-indent: -9999em;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background: var(--loader-color);
+    background: linear-gradient(to right, var(--loader-color) 10%, rgba(255, 255, 255, 0) 42%);
+    position: relative;
+    animation: fading-circle 1.4s infinite linear;
+    transform: translateZ(0);
+}
+.loader-fading-circle:before {
+    width: 50%;
+    height: 50%;
+    background: var(--loader-color);
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+}
+.loader-fading-circle:after {
+    background: var(--disabled-button-bg); 
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@keyframes fading-circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
